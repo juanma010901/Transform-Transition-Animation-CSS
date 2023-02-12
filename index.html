@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranform--Transition</title>
+    <style>
+        body {
+            background: linear-gradient(180deg, rgba(37,230,159,1) 0%, rgba(87,30,223,1) 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .item {
+            width: 25vh;
+            height: 25vh;
+            border-radius: 10%;
+            margin: 5%;
+        }
+        .one {
+            background: linear-gradient(90deg, rgba(37,74,230,1) 0%, rgba(223,30,54,1) 100%);
+            transition: transform 1s ease;
+        }
+        .one:hover {
+            transform: translate(-50%, -50%);
+        }
+        .two {
+            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+            transition: transform 2s ease-in;
+        }
+        .two:hover {
+            transform: rotate(500deg);
+        }
+        .three {
+            background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+            transition: transform 1s ease;
+        }
+        .three:hover {
+            transform: scale(1.4);
+        }
+        .four {
+            background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+            transition: transform 1s ease;
+        }
+        .four:hover {
+            transform: skew(20deg, 20deg);
+        }
+        .five {
+            position: relative;
+            perspective: 80px;
+        }
+        .hijo {
+            position: absolute;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            transition: transform 1s ease;
+        }
+        .hijo:hover {
+            transform-style: preserve-3d;
+            transform: rotateX(40deg);
+        }
+        .six {
+            transform-style: preserve-3d;
+            position: relative;
+            transition: transform 1s;
+        }
+        .six:hover {
+            transform: rotateY(180deg);
+            transition: transform 700ms;
+        }
+        .face {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+        .face.front {
+            background: linear-gradient(90deg, rgba(113,230,37,1) 0%, rgba(233,148,229,1) 100%);
+        }
+        .face.back {
+            background: linear-gradient(190deg, rgba(37,74,230,1) 0%, rgba(200,223,30,1) 100%);
+            transform: rotateX(180deg);
+        }
+        .seven {
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .seven:hover {
+            transform: scale(1.4, 0.8);
+        }
+        .eight {
+            background: radial-gradient(circle, rgba(37,230,194,1) 0%, rgba(191,223,30,1) 100%);
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .eight:hover {
+            transform: scale(0.8, 1.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+        <div class="item four"></div>
+        <div class="item five">
+            <div class="item hijo"></div>
+        </div>
+        <div class="item six">
+            <div class="item face front"></div>
+            <div class="item face back"></div>
+        </div>
+        <div class="item seven"></div>
+        <div class="item eight"></div>
+    </div>
+</body>
+</html>
