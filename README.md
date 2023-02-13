@@ -1,4 +1,4 @@
-![](https://visitor-badge.glitch.me/badge?page_id=juanma010901.Transform-Transition-Animation-CSS)
+![Visitantes](https://visitor-badge.glitch.me/badge?page_id=juanma010901.Transform-Transition-Animation-CSS&left_text=Visitantes)
 
 # Transform-Transition-Animation-CSS 🚀
 
